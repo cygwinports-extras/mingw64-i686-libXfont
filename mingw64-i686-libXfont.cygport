@@ -3,7 +3,7 @@ ORIG_PN="libXfont"
 inherit xorg cross
 
 NAME="mingw64-i686-libXfont"
-VERSION=1.4.5
+VERSION=1.4.6
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="X11 font library for Win32 toolchain"
@@ -12,9 +12,6 @@ contains msvcrt-linked binaries (aka 'mingw').  It is for use with the
 mingw64-i686-gcc cross compiler, and installs into the
 /usr/i686-w64-mingw32/sys-root/mingw/{lib,include} directories."
 
-PATCH_URI="https://bitbucket.org/rpavlik/mingw-cross-env/raw/8f5ee407768f/src/libXfont-1-dummy-readlink.patch"
-
-# BZ2_bzopen: AC_CHECK_LIB doesn't support stdcall
-CYGCONF_ARGS="--disable-fc --with-bzip2 ac_cv_lib_bz2_BZ2_bzopen=yes"
+CYGCONF_ARGS="--disable-fc --with-bzip2"
 
 KEEP_LA_FILES="static"
