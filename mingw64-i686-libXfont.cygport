@@ -3,7 +3,7 @@ ORIG_PN="libXfont"
 inherit xorg cross
 
 NAME="mingw64-i686-libXfont"
-VERSION=1.4.6
+VERSION=1.4.7
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="X11 font library for Win32 toolchain"
